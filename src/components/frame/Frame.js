@@ -3,14 +3,14 @@ import { useChatbot } from "../../chatbot/useChatbot"
 import { Messages } from "./messages/Messages"
 import { Options } from "./options/Options"
 import { Form } from "./form/Form"
-import { useEffect, useState } from "react"
+import React, {useEffect, useRef, useState} from "react"
 
 
 import "./frame.css"
 
 export const Frame = () => {
     const { chatbotState, chatbotDispatch } = State()
-    const [key, setKey] = useState(0); 
+    const [key, setKey] = useState(0);
 
     const triggerRefresh = () => {
         setKey(prevKey => prevKey + 1);
@@ -24,19 +24,34 @@ export const Frame = () => {
         chatbotDispatch
     )
 
-    const [isBotConversation, setIsBotConversation] = useState(false)
+  const messagesEndRef = useRef(null);
+
+  // Function to scroll to the bottom
+  const scrollToBottom = () => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Trigger scroll when messages prop changes
+  useEffect(() => {
+    scrollToBottom();
+  }, [chatbotState]);
+
+
+  const [isBotConversation, setIsBotConversation] = useState(false)
 
     useEffect(() => {
         setIsBotConversation(chatbotState.AI === true)
     }, [chatbotState.AI]) // Re-run the effect whenever chatbotState.AI changes
 
-    
-    
+
+
     return (
         <div className="frame">
             {/* Force re-rendering of Messages by using a dynamic key */}
             <Messages key={key} messages={chatbotState.messages} />
-             
+
             {/* Show Options component only if it's not a bot conversation */}
             {!isBotConversation && (
                 <Options
@@ -54,6 +69,8 @@ export const Frame = () => {
                     onAdd={triggerRefresh}
                 />
             )}
+
+          <div ref={messagesEndRef} />
         </div>
     )
 }
