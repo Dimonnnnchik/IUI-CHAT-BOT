@@ -1,0 +1,294 @@
+[
+  {
+    "res_id": 0,
+    "res": "How are you feeling today? 😊",
+    "options": [
+      {
+        "label": "I'm feeling great!",
+        "res_id": 1
+      },
+      {
+        "label": "I'm feeling a bit stressed.",
+        "res_id": 2
+      },
+      {
+        "label": "I'm feeling down or sad.",
+        "res_id": 3
+      },
+      {
+        "label": "I'm feeling worried.",
+        "res_id": 4
+      },
+      {
+        "label": "I'm feeling frustrated.",
+        "res_id": 5
+      },
+      {
+        "label": "Talk to a bot!",
+        "res_id": 19
+      }
+    ]
+  },
+  {
+    "res_id": 1,
+    "res": "That's wonderful to hear! Keep that positive energy going! ✨",
+    "options": [
+      {
+        "label": "Tell me more!",
+        "res_id": 6
+      },
+      {
+        "label": "I'm done for now.",
+        "res_id": 17
+      }
+    ]
+  },
+  {
+    "res_id": 2,
+    "res": "It sounds like you're feeling a bit stressed. Would you like to try a quick breathing exercise to help relax?",
+    "options": [
+      {
+        "label": "Yes, please!",
+        "res_id": 7
+      },
+      {
+        "label": "Not right now.",
+        "res_id": 8
+      }
+    ]
+  },
+  {
+    "res_id": 3,
+    "res": "I'm really sorry to hear you're feeling down. It's okay to feel sad sometimes. Would you like me to suggest a mindfulness activity?",
+    "options": [
+      {
+        "label": "Yes, that sounds helpful.",
+        "res_id": 9
+      },
+      {
+        "label": "Maybe later.",
+        "res_id": 8
+      }
+    ]
+  },
+  {
+    "res_id": 4,
+    "res": "It seems like you're feeling a bit worried. Sometimes, focusing on your breathing can help calm those nerves. Would you like to try it?",
+    "options": [
+      {
+        "label": "Yes, please guide me.",
+        "res_id": 7
+      },
+      {
+        "label": "No, I'm okay for now.",
+        "res_id": 8
+      }
+    ]
+  },
+  {
+    "res_id": 5,
+    "res": "Frustration can be tough. Would you like to hear some positive affirmations or try a calming exercise?",
+    "options": [
+      {
+        "label": "I’d love some affirmations.",
+        "res_id": 10
+      },
+      {
+        "label": "A calming exercise sounds good.",
+        "res_id": 7
+      }
+    ]
+  },
+  {
+    "res_id": 6,
+    "res": "You’re on a roll! Keep up the good work and stay positive. 😊",
+    "options": [
+      {
+        "label": "Tell me more!",
+        "res_id": 1
+      },
+      {
+        "label": "I'm done for now.",
+        "res_id": 16
+      }
+    ]
+  },
+  {
+    "res_id": 7,
+    "res": "Let's do a quick breathing exercise: Inhale deeply for 4 seconds, hold for 4 seconds, and then exhale slowly for 6 seconds. Repeat a few times. How do you feel?",
+    "options": [
+      {
+        "label": "I feel more relaxed!",
+        "res_id": 11
+      },
+      {
+        "label": "Not sure yet, but I’ll try again later.",
+        "res_id": 12
+      }
+    ]
+  },
+  {
+    "res_id": 8,
+    "res": "It's okay to take things at your own pace. Just know that I’m here if you need support. 😊",
+    "options": [
+      {
+        "label": "Talk to me more.",
+        "res_id": 13
+      },
+      {
+        "label": "I'm done for now.",
+        "res_id": 16
+      }
+    ]
+  },
+  {
+    "res_id": 9,
+    "res": "Mindfulness can help you feel more centered. You can try a simple exercise: Close your eyes, breathe deeply, and focus on the sounds around you. Want to give it a try?",
+    "options": [
+      {
+        "label": "Yes, let's try it.",
+        "res_id": 7
+      },
+      {
+        "label": "Not right now.",
+        "res_id": 8
+      }
+    ]
+  },
+  {
+    "res_id": 10,
+    "res": "Here are some positive affirmations for you: 'I am capable of handling whatever comes my way.' 'I am strong and resilient.' Repeat these when you feel ready. 😊",
+    "options": [
+      {
+        "label": "I feel better now!",
+        "res_id": 11
+      },
+      {
+        "label": "I need a bit more time.",
+        "res_id": 12
+      }
+    ]
+  },
+  {
+    "res_id": 11,
+    "res": "I’m so glad to hear you’re feeling better! Remember, you’re stronger than you think. 💪",
+    "options": [
+      {
+        "label": "I want to talk more.",
+        "res_id": 14
+      },
+      {
+        "label": "I’m done for now.",
+        "res_id": 16
+      }
+    ]
+  },
+  {
+    "res_id": 12,
+    "res": "No worries! You can always come back when you're ready. Take your time. 😊",
+    "options": [
+      {
+        "label": "I want to try again later.",
+        "res_id": 2
+      },
+      {
+        "label": "I'm okay for now.",
+        "res_id": 16
+      }
+    ]
+  },
+  {
+    "res_id": 13,
+    "res": "I’m here to listen! What’s on your mind?",
+    "options": [
+      {
+        "label": "I’m feeling a bit better.",
+        "res_id": 14
+      },
+      {
+        "label": "I want to talk more about it.",
+        "res_id": 3
+      }
+    ]
+  },
+  {
+    "res_id": 14,
+    "res": "You're doing great. If you ever feel overwhelmed, remember to take a moment for yourself. 😊",
+    "options": [
+      {
+        "label": "Thanks, I needed that!",
+        "res_id": 1
+      },
+      {
+        "label": "I'm done for now.",
+        "res_id": 16
+      }
+    ]
+  },
+  {
+    "res_id": 15,
+    "res": "You can try focusing on your breathing: inhale deeply, hold for a few seconds, and slowly exhale. It’s a great way to calm down. 🌬️",
+    "options": [
+      {
+        "label": "I feel better now.",
+        "res_id": 7
+      },
+      {
+        "label": "Thanks for the advice.",
+        "res_id": 16
+      }
+    ]
+  },
+  {
+    "res_id": 16,
+    "res": "Was this conversation helpful?",
+    "options": [
+      {
+        "label": "Yes, it was helpful!",
+        "res_id": 17
+      },
+      {
+        "label": "No, it wasn't helpful.",
+        "res_id": 18
+      }
+    ]
+  },
+  {
+    "res_id": 17,
+    "res": "I'm glad I could help! Take care, and feel free to reach out anytime. 😊",
+    "options": [
+      {
+        "label": "Start from the beginning.",
+        "res_id": -1
+      }
+    ]
+  },
+  {
+    "res_id": 18,
+    "res": "Would you like to talk to a bot instead? 🤖",
+    "options": [
+      {
+        "label": "Yes, I'd like to talk to a bot.",
+        "res_id": 19
+      },
+      {
+        "label": "No, I'm good for now.",
+        "res_id": 20
+      }
+    ]
+  },
+  {
+    "res_id": 19,
+    "res": "Hi, how can I assist you today?"
+  },
+  {
+    "res_id": 20,
+    "res": "Take care, and remember I’m always here when you need someone to talk to! 💖",
+    "options": [
+      {
+        "label": "Start from the beginning.",
+        "res_id": -1
+      }
+    ]
+  }
+]
