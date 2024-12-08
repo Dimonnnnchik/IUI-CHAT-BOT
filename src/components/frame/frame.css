@@ -85,6 +85,8 @@ ul > li {
     padding: 2%;
     margin-top: 3%;
     border-top: 2px solid #B3B9C9;
+    position: sticky;
+    bottom:0;
 }
 
 .frame > .options > p {
@@ -217,3 +219,5 @@ ul > li {
         padding: 10px 15px;
     }
 }
+
+

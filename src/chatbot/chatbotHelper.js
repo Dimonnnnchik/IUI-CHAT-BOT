@@ -34,43 +34,49 @@ export const handleOptionClick = (chatbotStates, op) => {
 
 
 export const handleMessageSubmit = (chatbotStates, msg, triggerRefresh) => {
-    // Encapsulate the sender's message
-    const userMessage = { msg, type: "sender" };
-    chatbotStates.messages.push(userMessage);
+  // Function to generate a timestamp for messages
+  const getTimestamp = () => {
+    const date = new Date();
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  };
 
-    // Limit to the last 6 messages
-    if (chatbotStates.messages.length > 12) {
-        chatbotStates.messages = chatbotStates.messages.slice(chatbotStates.messages.length - 12); // Keep the last 6 bot and sender messages
-    }
+  // Encapsulate the sender's message with a timestamp
+  const userMessage = { msg, type: "sender", timestamp: getTimestamp() };
+  chatbotStates.messages.push(userMessage);
 
-    if (chatbotStates.AI) {
-        console.log("Waiting for AI response...");
+  // Limit to the last 12 messages (6 sender and 6 bot)
+  if (chatbotStates.messages.length > 12) {
+    chatbotStates.messages = chatbotStates.messages.slice(chatbotStates.messages.length - 12);
+  }
 
-        
-        const lastMessages = chatbotStates.messages.slice(-10); 
-        const userLog = lastMessages.map(message => `${message.type === "bot" ? "Bot" : "Sender"}: ${message.msg}`).join("\n");
-        console.log(userLog)
-        // Simulate calling the AI service
-        generateAIMessage(userLog, msg).then(aiResponse => {
-            const botMessage = { msg: aiResponse, type: "bot" };
-            chatbotStates.messages.push(botMessage);
-            console.log("AI Response:", botMessage);
+  if (chatbotStates.AI) {
+    console.log("Waiting for AI response...");
 
-            // Trigger refresh after the AI response is added to the chatbot state
-            triggerRefresh();  // This will increment the key in the parent Frame component
+    const lastMessages = chatbotStates.messages.slice(-10);
+    const userLog = lastMessages.map(message => `${message.type === "bot" ? "Bot" : "Sender"}: ${message.msg}`).join("\n");
+    console.log(userLog);
 
-            // Force update of the chatbot state
-            chatbotStates = { ...chatbotStates };
+    // Simulate calling the AI service
+    generateAIMessage(userLog, msg).then(aiResponse => {
+      const botMessage = { msg: aiResponse, type: "bot", timestamp: getTimestamp() };
+      chatbotStates.messages.push(botMessage);
+      console.log("AI Response:", botMessage);
 
-            return chatbotStates;
-        }).catch(error => {
-            console.error("Error generating AI response:", error);
-            chatbotStates.messages.push({ msg: "Error generating response. Please try again.", type: "bot" });
-            chatbotStates = { ...chatbotStates };
-        });
-    }
+      // Trigger refresh after the AI response is added to the chatbot state
+      triggerRefresh();  // This will increment the key in the parent Frame component
 
-    return chatbotStates;
+      // Force update of the chatbot state
+      chatbotStates = { ...chatbotStates };
+
+      return chatbotStates;
+    }).catch(error => {
+      console.error("Error generating AI response:", error);
+      chatbotStates.messages.push({ msg: "Error generating response. Please try again.", type: "bot", timestamp: getTimestamp() });
+      chatbotStates = { ...chatbotStates };
+    });
+  }
+
+  return chatbotStates;
 };
 
 
