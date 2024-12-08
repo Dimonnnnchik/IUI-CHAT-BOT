@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/IUI-CHAT-BOT/static/css/main.45948f7b.css",
+    "main.js": "/IUI-CHAT-BOT/static/js/main.b61bbf63.js",
+    "index.html": "/IUI-CHAT-BOT/index.html",
+    "main.45948f7b.css.map": "/IUI-CHAT-BOT/static/css/main.45948f7b.css.map",
+    "main.b61bbf63.js.map": "/IUI-CHAT-BOT/static/js/main.b61bbf63.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45948f7b.css",
+    "static/js/main.b61bbf63.js"
+  ]
+}
