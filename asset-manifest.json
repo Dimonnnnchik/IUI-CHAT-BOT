@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/IUI-CHAT-BOT/static/css/main.afbf0dd8.css",
+    "main.css": "/IUI-CHAT-BOT/static/css/main.82dad34a.css",
     "main.js": "/IUI-CHAT-BOT/static/js/main.39e09101.js",
     "index.html": "/IUI-CHAT-BOT/index.html",
-    "main.afbf0dd8.css.map": "/IUI-CHAT-BOT/static/css/main.afbf0dd8.css.map",
+    "main.82dad34a.css.map": "/IUI-CHAT-BOT/static/css/main.82dad34a.css.map",
     "main.39e09101.js.map": "/IUI-CHAT-BOT/static/js/main.39e09101.js.map"
   },
   "entrypoints": [
-    "static/css/main.afbf0dd8.css",
+    "static/css/main.82dad34a.css",
     "static/js/main.39e09101.js"
   ]
 }
