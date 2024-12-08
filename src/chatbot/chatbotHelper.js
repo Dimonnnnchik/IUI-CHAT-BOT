@@ -46,8 +46,8 @@ export const handleMessageSubmit = (chatbotStates, msg, triggerRefresh) => {
     if (chatbotStates.AI) {
         console.log("Waiting for AI response...");
 
-        // Create a prompt containing the last 6 messages (3 bot and 3 sender messages)
-        const lastMessages = chatbotStates.messages.slice(-10); // Get the last 6 messages
+        
+        const lastMessages = chatbotStates.messages.slice(-10); 
         const userLog = lastMessages.map(message => `${message.type === "bot" ? "Bot" : "Sender"}: ${message.msg}`).join("\n");
         console.log(userLog)
         // Simulate calling the AI service
